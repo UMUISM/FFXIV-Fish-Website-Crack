@@ -4,7 +4,7 @@ import json
 import string
 import time
 
-url = 'http://ffwess.top/login.asp'  # 目标网站
+url = 'http://ffwess.top'  # 目标网站
 count = 1000 # 生成次数
 
 server = json.loads(
@@ -40,7 +40,7 @@ for i in range(0, 1000):
         'dj': str(random.randint(33, 90))
     }
     try:
-        x = requests.post(url, data=datas)
+        x = requests.post(url + '/login.asp', data=datas)
         print(x)
     except:
         pass
